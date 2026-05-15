@@ -7,8 +7,8 @@
   "brand": {
     "name": "Paradigm Shift Ventures",
     "legalName": "Paradigm Shift Ventures Holdings",
-    "logo": "./logo1.png",
-    "secondaryLogo": "./logo2.png",
+    "logo": "./logo.png",
+    "secondaryLogo": "./logo.png",
     "brandCode": "PSV"
   },
   "navigation": [
