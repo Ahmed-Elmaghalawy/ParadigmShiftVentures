@@ -7,6 +7,7 @@ Static GitHub Pages site for the Paradigm Shift Ventures holding company.
 - `index.html` contains the page shell and Tailwind CDN setup.
 - `assets/css/styles.css` contains custom visual behavior and small reusable styles.
 - `assets/js/app.js` loads data, renders page sections, and handles the theme toggle.
+- `assets/favicons/` contains generated favicon and touch-icon assets.
 - `data/site.json` contains brand, navigation, page copy, and subsidiaries.
 
 ## Add A Subsidiary
