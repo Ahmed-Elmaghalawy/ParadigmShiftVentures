@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta id="metaDescription" name="description" content="" />
   <title>Paradigm Shift Ventures</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,9 +20,6 @@
           },
           boxShadow: {
             glass: '0 10px 40px rgba(0,0,0,0.12)'
-          },
-          backdropBlur: {
-            xs: '2px'
           }
         }
       }
@@ -31,270 +29,104 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .fade-up.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .glass {
-      backdrop-filter: blur(30px);
-      -webkit-backdrop-filter: blur(30px);
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 
 <body class="bg-white text-neutral-900 dark:bg-neutral-950 dark:text-white transition-colors duration-700 overflow-x-hidden">
-
-  <div class="fixed inset-0 -z-10 overflow-hidden">
+  <div class="site-aura fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
     <div class="absolute top-[-150px] left-[-100px] w-[500px] h-[500px] bg-orange-400/20 dark:bg-orange-500/10 blur-3xl rounded-full"></div>
     <div class="absolute bottom-[-150px] right-[-100px] w-[450px] h-[450px] bg-neutral-300/40 dark:bg-white/5 blur-3xl rounded-full"></div>
   </div>
 
   <header class="fixed top-0 left-0 w-full z-50">
     <div class="max-w-7xl mx-auto px-6 py-5">
-      <div class="glass bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-3xl shadow-glass px-6 py-4 flex items-center justify-between transition-all duration-500">
+      <div class="glass bg-white/70 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-3xl shadow-glass px-5 md:px-6 py-4 flex items-center justify-between transition-all duration-500">
+        <a href="#home" class="flex items-center gap-4 min-w-0" aria-label="Paradigm Shift Ventures home">
+          <img id="brandLogo" src="./logo1.png" alt="" class="h-11 w-11 rounded-2xl object-contain bg-white/80 dark:bg-black/30 p-1" />
+          <span id="brandName" class="text-xs md:text-sm tracking-[0.22em] md:tracking-[0.35em] uppercase font-semibold truncate"></span>
+        </a>
 
-        <div class="flex items-center gap-4">
-          <div class="relative w-10 h-10">
-            <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-orange-300 to-orange-600 rotate-12"></div>
-            <div class="absolute inset-[6px] rounded-xl bg-white/80 dark:bg-black/60 glass"></div>
-          </div>
+        <nav id="siteNav" class="hidden md:flex items-center gap-8 text-sm text-neutral-600 dark:text-neutral-300" aria-label="Main navigation"></nav>
 
-          <div>
-            <div class="text-sm tracking-[0.35em] uppercase font-semibold">
-              Paradigm Shift Ventures
-            </div>
-          </div>
-        </div>
-
-        <div class="hidden md:flex items-center gap-8 text-sm text-neutral-600 dark:text-neutral-300">
-          <a href="#about" class="hover:text-black dark:hover:text-white transition">About</a>
-          <a href="#companies" class="hover:text-black dark:hover:text-white transition">Companies</a>
-          <a href="#vision" class="hover:text-black dark:hover:text-white transition">Vision</a>
-        </div>
-
-        <button id="themeToggle" class="glass bg-white/40 dark:bg-white/10 border border-white/20 dark:border-white/10 rounded-2xl px-4 py-2 text-sm hover:scale-105 transition-all duration-300">
-          Toggle Mode
+        <button id="themeToggle" class="theme-toggle glass bg-white/60 dark:bg-white/10 border border-black/5 dark:border-white/10 rounded-2xl h-11 w-11 grid place-items-center hover:scale-105 transition-all duration-300" type="button" aria-label="Toggle color theme">
+          <span class="theme-icon" aria-hidden="true"></span>
         </button>
       </div>
     </div>
   </header>
 
-  <main>
-
+  <main id="home">
     <section class="min-h-screen flex items-center pt-32 px-6">
-      <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-20 items-center">
-
+      <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-[1.05fr_0.95fr] gap-16 lg:gap-20 items-center">
         <div class="fade-up">
-          <div class="uppercase tracking-[0.35em] text-xs text-orange-500 mb-6 font-medium">
-            Paradigm Shift Ventures Holdings
-          </div>
-
-          <h1 class="text-5xl md:text-7xl font-semibold leading-[0.95] tracking-tight max-w-4xl">
-            Building the next generation of strategic enterprises.
-          </h1>
-
-          <p class="mt-8 text-lg leading-8 text-neutral-600 dark:text-neutral-300 max-w-2xl">
-            Paradigm Shift Ventures is a modern holding company designed for long-term infrastructure, industrial, energy, technology, and resource development across scalable global sectors.
-          </p>
-
-          <div class="mt-10 flex flex-wrap gap-4">
-            <a href="#companies" class="rounded-full bg-orange-500 hover:bg-orange-600 text-white px-7 py-3 transition-all duration-300 hover:scale-105 shadow-xl shadow-orange-500/20">
-              Explore Companies
-            </a>
-
-            <a href="#vision" class="glass bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-full px-7 py-3 hover:scale-105 transition-all duration-300">
-              Our Vision
-            </a>
-          </div>
+          <div id="heroEyebrow" class="uppercase tracking-[0.35em] text-xs text-orange-500 mb-6 font-medium"></div>
+          <h1 id="heroTitle" class="text-5xl md:text-7xl font-semibold leading-[0.95] tracking-tight max-w-4xl"></h1>
+          <p id="heroText" class="mt-8 text-lg leading-8 text-neutral-600 dark:text-neutral-300 max-w-2xl"></p>
+          <div id="heroActions" class="mt-10 flex flex-wrap gap-4"></div>
         </div>
 
         <div class="fade-up">
-          <div class="glass bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-[40px] p-8 shadow-glass relative overflow-hidden">
-
-            <div class="absolute top-[-100px] right-[-80px] w-72 h-72 bg-orange-400/20 blur-3xl rounded-full"></div>
-
-            <div class="space-y-5 relative z-10">
-
-              <div class="flex items-center justify-between pb-4 border-b border-black/5 dark:border-white/10">
+          <div class="glass bg-white/60 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[40px] p-7 md:p-8 shadow-glass relative overflow-hidden">
+            <div class="absolute top-[-100px] right-[-80px] w-72 h-72 bg-orange-400/20 blur-3xl rounded-full" aria-hidden="true"></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between gap-5 pb-5 border-b border-black/5 dark:border-white/10">
                 <div>
-                  <div class="text-sm uppercase tracking-[0.25em] text-orange-500">
-                    Parent Identity
-                  </div>
-                  <div class="mt-2 text-2xl font-semibold">
-                    Paradigm Shift Ventures
-                  </div>
+                  <div id="identityEyebrow" class="text-sm uppercase tracking-[0.25em] text-orange-500"></div>
+                  <div id="identityTitle" class="mt-2 text-2xl font-semibold"></div>
                 </div>
+                <img id="identityLogo" src="./logo2.png" alt="" class="hidden sm:block h-16 w-16 rounded-3xl object-contain bg-white/70 dark:bg-black/20 p-2" />
               </div>
-
-              <div class="grid gap-4">
-                <div class="glass rounded-3xl p-5 bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10">
-                  <div class="text-xs uppercase tracking-[0.25em] text-orange-500">PSV</div>
-                  <div class="mt-2 text-xl font-medium">Mineral Resources Development</div>
-                </div>
-
-                <div class="glass rounded-3xl p-5 bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10">
-                  <div class="text-xs uppercase tracking-[0.25em] text-orange-500">PSV</div>
-                  <div class="mt-2 text-xl font-medium">Infrastructure</div>
-                </div>
-
-                <div class="glass rounded-3xl p-5 bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10">
-                  <div class="text-xs uppercase tracking-[0.25em] text-orange-500">PSV</div>
-                  <div class="mt-2 text-xl font-medium">Advanced Technologies</div>
-                </div>
-              </div>
-
+              <div id="identityCards" class="grid gap-4 mt-5"></div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
     <section id="about" class="px-6 py-28">
       <div class="max-w-6xl mx-auto fade-up">
-
-        <div class="glass bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-[40px] p-10 md:p-14 shadow-glass">
-
-          <div class="uppercase tracking-[0.35em] text-xs text-orange-500 mb-5">
-            Corporate Architecture
-          </div>
-
-          <h2 class="text-4xl md:text-5xl font-semibold leading-tight max-w-4xl">
-            Unified branding designed for long-term multi-sector expansion.
-          </h2>
-
-          <p class="mt-8 text-lg leading-8 text-neutral-600 dark:text-neutral-300 max-w-4xl">
-            The Paradigm Shift Ventures identity functions as a scalable master brand system where every subsidiary inherits the same institutional DNA.
-            
-            This creates stronger trust, operational flexibility, and a future-proof expansion structure across infrastructure, industrial systems, resources, energy, and emerging technologies.
-          </p>
-
+        <div class="glass bg-white/60 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[40px] p-10 md:p-14 shadow-glass">
+          <div id="aboutEyebrow" class="uppercase tracking-[0.35em] text-xs text-orange-500 mb-5"></div>
+          <h2 id="aboutTitle" class="text-4xl md:text-5xl font-semibold leading-tight max-w-4xl"></h2>
+          <p id="aboutText" class="mt-8 text-lg leading-8 text-neutral-600 dark:text-neutral-300 max-w-4xl whitespace-pre-line"></p>
         </div>
       </div>
     </section>
 
-    <section id="companies" class="px-6 py-10">
+    <section id="subsidiaries" class="px-6 py-10">
       <div class="max-w-7xl mx-auto">
-
         <div class="fade-up mb-14">
-          <div class="uppercase tracking-[0.35em] text-xs text-orange-500 mb-4">
-            Operating Companies
-          </div>
-
-          <h2 class="text-4xl md:text-6xl font-semibold tracking-tight">
-            Built to scale.
-          </h2>
+          <div id="subsidiariesEyebrow" class="uppercase tracking-[0.35em] text-xs text-orange-500 mb-4"></div>
+          <h2 id="subsidiariesTitle" class="text-4xl md:text-6xl font-semibold tracking-tight"></h2>
         </div>
-
-        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-
-          <div class="fade-up glass bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-[32px] p-7 hover:-translate-y-2 transition-all duration-500">
-            <div class="text-xs uppercase tracking-[0.25em] text-orange-500">PSV</div>
-            <h3 class="text-2xl font-semibold mt-4">Mineral Resources</h3>
-            <p class="mt-5 text-neutral-600 dark:text-neutral-300 leading-7">
-              Strategic extraction, processing, and industrial resource development.
-            </p>
-          </div>
-
-          <div class="fade-up glass bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-[32px] p-7 hover:-translate-y-2 transition-all duration-500">
-            <div class="text-xs uppercase tracking-[0.25em] text-orange-500">PSV</div>
-            <h3 class="text-2xl font-semibold mt-4">Energy</h3>
-            <p class="mt-5 text-neutral-600 dark:text-neutral-300 leading-7">
-              Infrastructure-focused energy ventures and resilient utility ecosystems.
-            </p>
-          </div>
-
-          <div class="fade-up glass bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-[32px] p-7 hover:-translate-y-2 transition-all duration-500">
-            <div class="text-xs uppercase tracking-[0.25em] text-orange-500">PSV</div>
-            <h3 class="text-2xl font-semibold mt-4">Infrastructure</h3>
-            <p class="mt-5 text-neutral-600 dark:text-neutral-300 leading-7">
-              Long-term industrial and regional infrastructure asset development.
-            </p>
-          </div>
-
-          <div class="fade-up glass bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-[32px] p-7 hover:-translate-y-2 transition-all duration-500">
-            <div class="text-xs uppercase tracking-[0.25em] text-orange-500">PSV</div>
-            <h3 class="text-2xl font-semibold mt-4">Advanced Technologies</h3>
-            <p class="mt-5 text-neutral-600 dark:text-neutral-300 leading-7">
-              Emerging systems, industrial AI, XR, and next-generation technologies.
-            </p>
-          </div>
-
-        </div>
+        <div id="subsidiaryGrid" class="grid md:grid-cols-2 xl:grid-cols-4 gap-6"></div>
       </div>
     </section>
 
     <section id="vision" class="px-6 py-28">
       <div class="max-w-6xl mx-auto fade-up">
-
-        <div class="glass bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-[40px] p-10 md:p-16 shadow-glass text-center">
-
-          <div class="uppercase tracking-[0.35em] text-xs text-orange-500 mb-5">
-            Vision
-          </div>
-
-          <h2 class="text-4xl md:text-6xl font-semibold leading-tight max-w-5xl mx-auto">
-            From legacy systems to new paradigms.
-          </h2>
-
-          <p class="mt-8 text-lg leading-8 text-neutral-600 dark:text-neutral-300 max-w-4xl mx-auto">
-            Inspired by transformation, tectonic movement, and structured evolution, the Paradigm Shift identity reflects long-term capability rather than trend-driven branding.
-          </p>
-
+        <div class="glass bg-white/60 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-[40px] p-10 md:p-16 shadow-glass text-center">
+          <div id="visionEyebrow" class="uppercase tracking-[0.35em] text-xs text-orange-500 mb-5"></div>
+          <h2 id="visionTitle" class="text-4xl md:text-6xl font-semibold leading-tight max-w-5xl mx-auto"></h2>
+          <p id="visionText" class="mt-8 text-lg leading-8 text-neutral-600 dark:text-neutral-300 max-w-4xl mx-auto"></p>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="px-6 pb-10 pt-4">
     <div class="max-w-7xl mx-auto">
-      <div class="glass bg-white/40 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-3xl p-6 flex flex-col md:flex-row justify-between gap-4 text-sm text-neutral-600 dark:text-neutral-400">
-
+      <div class="glass bg-white/60 dark:bg-white/5 border border-black/5 dark:border-white/10 rounded-3xl p-6 flex flex-col md:flex-row justify-between gap-4 text-sm text-neutral-600 dark:text-neutral-400">
         <div>
-          <span class="font-semibold text-neutral-900 dark:text-white">Paradigm Shift Ventures</span>
+          <span id="footerBrand" class="font-semibold text-neutral-900 dark:text-white"></span>
           <br>
-          Holding Company Identity
+          <span id="footerLabel"></span>
         </div>
-
-        <div>
-          Minimal institutional branding system designed for white-label scalability.
-        </div>
-
+        <div id="footerText"></div>
       </div>
     </div>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show')
-        }
-      })
-    }, { threshold: 0.15 })
-
-    document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el))
-
-    const toggle = document.getElementById('themeToggle')
-
-    toggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark')
-    })
-  </script>
-
+  <script src="./assets/js/app.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": "Paradigm Shift Ventures",
+    "description": "Paradigm Shift Ventures is a modular holding company platform for scalable subsidiaries across resources, energy, infrastructure, and advanced technologies.",
+    "siteUrl": "https://ahmed-elmaghalawy.github.io/ParadigmShiftVentures/"
+  },
+  "brand": {
+    "name": "Paradigm Shift Ventures",
+    "legalName": "Paradigm Shift Ventures Holdings",
+    "logo": "./logo1.png",
+    "secondaryLogo": "./logo2.png",
+    "brandCode": "PSV"
+  },
+  "navigation": [
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Subsidiaries",
+      "href": "#subsidiaries"
+    },
+    {
+      "label": "Vision",
+      "href": "#vision"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Paradigm Shift Ventures Holdings",
+    "title": "Building the next generation of strategic enterprises.",
+    "text": "Paradigm Shift Ventures is a modular holding company platform designed for long-term infrastructure, industrial, energy, technology, and resource development across scalable global sectors.",
+    "actions": [
+      {
+        "label": "Explore Subsidiaries",
+        "href": "#subsidiaries",
+        "style": "primary"
+      },
+      {
+        "label": "Our Vision",
+        "href": "#vision",
+        "style": "secondary"
+      }
+    ]
+  },
+  "identity": {
+    "eyebrow": "Parent Identity",
+    "title": "White-label friendly holding structure",
+    "items": [
+      {
+        "label": "PSV",
+        "title": "Mineral Resources Development"
+      },
+      {
+        "label": "PSV",
+        "title": "Infrastructure"
+      },
+      {
+        "label": "PSV",
+        "title": "Advanced Technologies"
+      }
+    ]
+  },
+  "sections": {
+    "about": {
+      "eyebrow": "Corporate Architecture",
+      "title": "Unified branding designed for long-term multi-sector expansion.",
+      "text": "The Paradigm Shift Ventures identity functions as a scalable master brand system where every subsidiary can inherit the same institutional DNA.\n\nThis creates stronger trust, operational flexibility, and a future-ready expansion structure across infrastructure, industrial systems, resources, energy, and emerging technologies."
+    },
+    "subsidiaries": {
+      "eyebrow": "Operating Companies",
+      "title": "Built to scale."
+    },
+    "vision": {
+      "eyebrow": "Vision",
+      "title": "From legacy systems to new paradigms.",
+      "text": "Inspired by transformation, tectonic movement, and structured evolution, the Paradigm Shift identity reflects long-term capability rather than trend-driven branding."
+    }
+  },
+  "subsidiaries": [
+    {
+      "brandCode": "PSV",
+      "name": "PSV Mineral Resources Development",
+      "description": "Strategic extraction, processing, and industrial resource development for long-term mineral and material supply chains.",
+      "status": "Example subsidiary",
+      "url": "https://ahmed-elmaghalawy.github.io/MineralResourcesDevelopment/",
+      "cta": "Open subsidiary"
+    },
+    {
+      "brandCode": "PSV",
+      "name": "PSV Energy",
+      "description": "Infrastructure-focused energy ventures and resilient utility ecosystems.",
+      "status": "Planned subsidiary",
+      "url": "",
+      "cta": ""
+    },
+    {
+      "brandCode": "PSV",
+      "name": "PSV Infrastructure",
+      "description": "Long-term industrial and regional infrastructure asset development.",
+      "status": "Planned subsidiary",
+      "url": "",
+      "cta": ""
+    },
+    {
+      "brandCode": "PSV",
+      "name": "PSV Advanced Technologies",
+      "description": "Emerging systems, industrial AI, XR, automation, and next-generation technologies.",
+      "status": "Planned subsidiary",
+      "url": "",
+      "cta": ""
+    }
+  ],
+  "footer": {
+    "label": "Holding Company Identity",
+    "text": "Minimal institutional branding system designed for modular subsidiary expansion and white-label scalability."
+  }
+}

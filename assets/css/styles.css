@@ -1,0 +1,61 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.glass {
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.theme-icon {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: currentColor;
+  color: rgb(23 23 23);
+}
+
+.dark .theme-icon {
+  color: rgb(255 255 255);
+  box-shadow: inset -6px -4px 0 rgb(10 10 10);
+}
+
+.theme-icon::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: inherit;
+  border: 1px solid currentColor;
+  opacity: 0.25;
+}
+
+.subsidiary-card {
+  min-height: 270px;
+}
+
+.subsidiary-card a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
